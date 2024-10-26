@@ -1,0 +1,233 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+.img__bg {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    filter: blur(8px);
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.wrapper {
+    width: 400px;
+    position: relative;
+}
+.wrapper__content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.img__container {
+    height: 270px;
+    width: 425px;
+}
+.img__player {
+    width: 95%;
+    height: 100%;
+}
+.svg_play {
+    display: block;
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+    cursor: pointer;
+}
+.svg_pause {
+    display: none;
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+    cursor: pointer;
+}
+.svg_prev {
+    width: 35px;
+    height: 35px;
+    filter: invert(0.9);
+    cursor: pointer;
+}
+.svg_next {
+    width: 35px;
+    height: 35px;
+    filter: invert(0.9);
+    cursor: pointer;
+}
+.svg_next:hover, .svg_prev:hover {
+    filter: invert(0.5);
+    transition: 0.5s all;
+}
+.svg_play:hover, .svg_pause:hover {
+    filter: invert(0.7);
+    transition: 0.5s all;
+}
+
+.audio-player {
+    position: relative;
+    background: linear-gradient(3deg, #e6d16c, #16014c);
+}
+.audio-player__descr {
+    position: relative;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 60px 200px 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+.audio-player__name {
+    color: white;
+}
+.audio-player__subtitle {
+    font-size: 22px;
+}
+.audio-player__title {
+    font-size: 26px;
+    color: #ffff50;
+}
+.audio-player__arrows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.audio-player__timeline {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+}
+.audio-player__line {
+    margin-top: 5px;
+    width: 100%;
+    height: 7px;
+    background-color: black;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
+.audio-player__line span {
+    display: block;
+    width: 0%;
+    height: 7px;
+    background-color: #ffff50;
+    border-radius: 5px 5px 5px 5px;
+}
+.audio-player__total-time {
+    color: #ffff50;
+    display: flex;
+    justify-content: end;
+}
+.audio-player__current-time {
+    margin: 5px 0;
+    color: white;
+    display: flex;
+    justify-content: start;
+}
+.contacts__wrapper {
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+}
+.link_gitHub img {
+    filter: invert(1);
+    margin-right: 15px;
+    width: 33px;
+    height: 33px;
+}
+.contacts__wrapper a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.link_course svg {
+    width: 40px;
+    height: 40px;
+}
+.volume {
+    filter: invert(0.85);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: -40px;
+    cursor: pointer;
+}
+.volume:hover {
+    filter: invert(0.5);
+    transition: 0.5s all;
+}
+.volume_slash {
+    filter: invert(0.85);
+    display: none;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: -40px;
+    cursor: pointer;
+}
+.volume_slash:hover {
+    filter: invert(0.5);
+    transition: 0.5s all;
+}
+
+@media (max-width: 430px) {
+    .wrapper {
+        width: 370px;
+    }
+    .img__container {
+        width: 390px;
+    }
+    .volume {
+        right: -31px;
+    }
+    .volume_slash {
+        right: -31px;
+    }
+}
+@media (max-width: 380px) {
+    .wrapper {
+        width: 305px;
+    }
+    .img__container {
+        width: 322px;
+        height: 210px;
+    }
+    .volume {
+        right: 0px;
+        top: 36px;
+        width: 22px;
+        height: 22px;
+    }
+    .volume_slash {
+        right: 0px;
+        top: 36px;
+        width: 22px;
+        height: 22px;
+    }
+    .audio-player__descr {
+        grid-template-columns: 60px 170px 50px;
+    }
+    .audio-player__title {
+        font-size: 22px;
+    }
+    .audio-player__subtitle {
+        font-size: 18px;
+    }
+}
